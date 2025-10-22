@@ -1,0 +1,129 @@
+/* Neon Modern Theme — Subtle Glow */
+
+/* Base font & background */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at top left, #111122, #000);
+  color: #d0d0d0;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container subtle glow */
+.container {
+  background: rgba(25, 25, 40, 0.75);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 900px;
+  backdrop-filter: blur(8px);
+}
+
+/* Active tab underline & glow */
+.tab-button.active {
+  border-bottom: 2px solid rgba(0, 255, 255, 0.5);
+  color: #7ef9ff;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+}
+
+/* Tab button hover animation */
+.tab-button {
+  transition: all 0.3s ease;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  color: #999;
+  cursor: pointer;
+}
+
+.tab-button:hover {
+  color: #66ffff;
+  text-shadow: 0 0 4px rgba(0, 255, 255, 0.25);
+}
+
+/* Tab content panels */
+.tab-content {
+  display: none;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(10, 10, 20, 0.5);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Inputs and selects */
+input, select {
+  background: rgba(20, 20, 35, 0.9);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  color: #eaeaea;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: rgba(0, 255, 255, 0.7);
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(90deg, #008b8b, #00bfbf);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.25);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #00bfbf, #009999);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Data cards */
+.card {
+  background: rgba(15, 15, 25, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+  padding: 1rem;
+  margin: 1rem 0;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  transform: scale(1.01);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Custom heading override */
+h1.text-3xl.font-bold {
+  color: #a8f7ff; /* soft cyan tone to match neon theme */
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.2);
+}
